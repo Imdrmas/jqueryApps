@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>color click</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<style media="screen">
+  div{
+    padding: 10px;
+    background: #DDD;
+    width: 300px;
+    margin: 20px 0;
+  }
+  ul{
+    list-style: none;
+    padding: 0;
+  }
+  li{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+
+  }
+</style>
+
+
+  </head>
+  <body>
+    <div class="">
+      this is normal text
+    </div>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+
+
+    <script>
+$(function () {
+
+var ul = $("ul li");
+
+ul.eq(0).css("background","red");
+ul.eq(1).css("background","green");
+ul.eq(2).css("background","blue");
+ul.eq(3).css("background","pink");
+
+ul.click(function ()
+{
+$("div").css(
+  {
+  "background" : $(this).css("background"),
+  "color": "#FFF"
+})
+
+});
+
+});
+
+
+    </script>
+  </body>
+</html>

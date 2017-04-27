@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>color click</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <link rel="stylesheet" href="default_theme.css">
+     <link rel="stylesheet" href="style.css">
+
+
+
+  </head>
+  <body>
+<button value="default_theme"> default</button>
+<button value="dark_theme"> dark</button>
+<article>
+  <header>
+    <h1>article name</h1>
+    <p>this is article information</p>
+  </header>
+
+<section>
+  this is article content
+</section>
+</article>
+    <script>
+
+$(function () {
+// click on the button to switch style
+
+$("button").click(function () {
+
+$("link[href*='theme']").attr("href", "css/" + $(this).val() + ".css");
+
+});
+});
+
+
+    </script>
+  </body>
+</html>

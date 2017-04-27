@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Jquery animation anfinity</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+        <style media="screen">
+          .offer{
+            width: 400px;
+            height: 150px;
+            background-color: #EEE;
+            text-align: center;
+            margin: 400px auto;
+            position: relative;
+            font-size: 40px;
+            padding: 10px;
+          }
+          img{
+            position: absolute;
+            top: -132px;
+            left: 500px;
+              margin: 300px auto;
+              z-index: 999;
+          }
+        </style>
+  </head>
+  <body>
+<img src="click.png" alt="click">
+<div class="offer">
+
+this is our offer
+</div>
+
+<script>
+
+  $(function () {
+
+(function animateImage(){
+
+  $('img').animate({
+
+  top: '-180px'
+
+  }, 1000, function (){
+
+    $(this).animate({
+
+      top: '-132px'
+
+}, 1000, function(){
+
+  animateImage();
+  
+});
+
+  });
+}());
+
+  });
+
+</script>
+  </body>
+</html>
